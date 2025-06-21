@@ -1,5 +1,9 @@
 
 import React, { useState } from "react";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "./assets/images/logo.png";
+import moment from "moment";
 
 const api = {
   key: "45320eb98dd32e71513cf76378fc81e7",
@@ -9,11 +13,20 @@ const api = {
 
 function App() {
   return (
-    <div className="App">
-      Hello
+  <div className="container">
+    <div className="row">
+      <div className="search-panel col-sm-12 col-md-4 my-3">
+        <input
+          type="text"
+          className="form-control search-input"
+          placeholder="Search"
+        />
+      </div>
     </div>
+  </div>
   );
 }
+
 
 
 export default App;
