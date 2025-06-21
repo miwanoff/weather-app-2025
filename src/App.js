@@ -11,9 +11,23 @@ const api = {
   icon: "https://openweathermap.org/img/w",
 };
 
+function Image(props) {
+  return <img src={props.src} alt="logo" style={{ width: "100px" }} />;
+}
+
+function Header(props) {
+  return (
+    <div className={props.className}>
+      <Image src={logo} />
+      <h1>Weather</h1>
+    </div>
+  );
+}
+
 function App() {
   return (
   <div className="container">
+    <Header className="alert bg-warning" />
     <div className="row">
       <div className="search-panel col-sm-12 col-md-4 my-3">
         <input
